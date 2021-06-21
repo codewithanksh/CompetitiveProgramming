@@ -9,6 +9,7 @@ public class MaximumLengthEvenOddSubarray {
     static int findMaxLen(int[] arr) {
         String prev_type, curr_type;
         int curr_max, max_len;
+
         prev_type = arr[0] % 2 == 0 ? "even" : "odd";
         curr_max = max_len = 1;
 
