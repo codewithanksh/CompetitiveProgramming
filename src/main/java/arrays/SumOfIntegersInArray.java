@@ -1,5 +1,7 @@
 package arrays;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -16,6 +18,11 @@ public class SumOfIntegersInArray {
     public static void main(String[] args) {
         solveByTwoForLoops();
         String s = "";
+        byte[] ba = s.getBytes();
+
+        for(int i=0; i < ba.length; i++) {
+
+        }
 
     }
 
