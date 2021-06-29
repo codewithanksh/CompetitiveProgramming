@@ -41,6 +41,8 @@ public class LongestSubarrayWithGivenSum {
         if (arr1.length < 1)
             return 0;
 
+        // Map to store prefix sum as Key and the index as value
+        // Don't update the value if same prefix_sum occurs again as it would help us in getting the longest subaaray
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < arr1.length; i++) {
