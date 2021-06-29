@@ -46,7 +46,7 @@ public class SubArrayWithZeroSum {
 
             prefix_sum = prefix_sum + arr[i];
 
-            if (set.contains(prefix_sum))
+            if (set.contains(prefix_sum) || prefix_sum == 0)
                 return true;
 
             set.add(prefix_sum);
@@ -94,6 +94,11 @@ public class SubArrayWithZeroSum {
         printResult(arr1, sum);
 
         arr1 = new int[]{1, 0, 3, 5, 6};
+        sum = 0;
+
+        printResult(arr1, sum);
+
+        arr1 = new int[]{0, 1, 3, 5, 6};
         sum = 0;
 
         printResult(arr1, sum);
