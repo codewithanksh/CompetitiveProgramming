@@ -8,6 +8,10 @@ package arrays.medium;
 public class GroupFlips {
 
     static int minimumGroupFlips(int[] arr) {
+
+        if(arr.length < 2)
+            return -1;
+
         int count = 0;
 
         int c0 = 0, c1 = 0;
@@ -36,37 +40,65 @@ public class GroupFlips {
 
         count = Math.min(c1, c0);
 
-        String flip = count == c0 ? "zero" : "one";
+        int toFlip = count == c0 ? 0 : 1;
+        int i = 0;
 
-        for (int i = 0; i < arr.length; i++) {
 
-            if (flip.equals("zero")) {
+        while (count > 0) {
+
+            if (toFlip == 0) {
+                while (i < arr.length && arr[i] != 0)
+                    i++;
 
                 int start = i;
 
-                while (arr[i] == 0 && i < arr.length) {
+                while (i < arr.length && arr[i] == 0 )
                     i++;
-                }
 
-                System.out.println("Flip from index " + start + " to " + (i - 1));
+                int end = i - 1;
+
+                if (end < 0 || start == end)
+                    System.out.println("Index for zero is " + start + " && " + start);
+                else
+                    System.out.println("Index for zero is " + start + " && " + end);
             } else {
+                while (i < arr.length && arr[i] != 1)
+                    i++;
 
                 int start = i;
-                while (arr[i] == 1 && i < arr.length) {
-                    i++;
-                }
 
-                System.out.println("Flip from index " + start + " to " + (i - 1));
+                while (i < arr.length && arr[i] == 1)
+                    i++;
+
+                int end = i - 1;
+
+                if (end < 0 || start == end)
+                    System.out.println("Index for one is " + start + " && " + start);
+                else
+                    System.out.println("Index for one is " + start + " && " + end);
             }
+
+            count--;
+
+
         }
 
-
         return count;
+
     }
 
 
     public static void main(String[] args) {
         int[] arr = {0, 1, 1, 1, 0};
-        System.out.println(minimumGroupFlips(arr));
+        minimumGroupFlips(arr);
+
+        arr = new int[]{1, 1, 0, 0, 0, 1};
+        minimumGroupFlips(arr);
+
+        arr = new int[]{1, 1, 1};
+        minimumGroupFlips(arr);
+
+        arr = new int[]{1, 0};
+        minimumGroupFlips(arr);
     }
 }
