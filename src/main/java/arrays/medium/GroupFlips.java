@@ -94,10 +94,11 @@ public class GroupFlips {
         if (arr.length < 2)
             return -1;
 
-        int firstGroup = arr[0] == 0 ? 0 : 1;
-        int secondGroup = firstGroup == 0 ? 1 : 0;
+//        int firstGroup = arr[0] == 0 ? 0 : 1;
+//        int secondGroup = firstGroup == 0 ? 1 : 0;
 
-        int counter = 0, flips = 0;
+        int counter = 0;
+        int flips = 0;
 
 //        while (counter < arr.length) {
 //
@@ -127,7 +128,7 @@ public class GroupFlips {
 
                 //Begining of a second group when current element is not equal to the first element
                 if (arr[i] != arr[0])
-                    System.out.println("starting from "+i);
+                    System.out.println("starting from " + i);
                 else {
                     System.out.println("ending at " + (i - 1));
                     flips++;
@@ -135,7 +136,7 @@ public class GroupFlips {
 
             }
 
-            if(arr[arr.length-1] != arr[0]) {
+            if (arr[arr.length - 1] != arr[0]) {
                 System.out.println("ending at " + (arr.length - 1));
                 flips++;
             }
