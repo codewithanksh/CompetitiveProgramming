@@ -2,6 +2,7 @@ package arrays.easy;
 
 import java.util.Arrays;
 
+//find no of distinct elements in a sorted array
 public class RemoveDuplicatesfromSortedArray {
 
     static int removeDuplicates(int[] arr, int size) {

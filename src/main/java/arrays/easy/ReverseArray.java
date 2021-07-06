@@ -24,7 +24,7 @@ public class ReverseArray {
     }
 
     static void reverseArrayUsingRecursion(int[] arr, int start, int end) {
-        if(start >= end)
+        if(start > end)
             return ;
         swap(arr,start,end);
         reverseArrayUsingRecursion(arr,start+1,end-1);
@@ -38,7 +38,7 @@ public class ReverseArray {
 
     public static void main(String[] args) {
         int[] arr = {1,2,1,1,1};
-        reverseArray(arr);
+       // reverseArray(arr);
         reverseArrayUsingRecursion(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
