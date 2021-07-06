@@ -14,7 +14,7 @@ public class BalancedStringProblem {
     static int countR, countL;
 
     //LR
-    static int isStringValid(String s) {
+    static int findBalancedSubStrings(String s) {
 
         if (s.length() == 0 || s.length() % 2 != 0)
             return 0;
@@ -50,6 +50,6 @@ public class BalancedStringProblem {
     public static void main(String[] args) {
 
         String s = "LRLLRRLRRL";
-        System.out.println("No of valid substrings: " + isStringValid(s));
+        System.out.println("No of valid substrings: " + findBalancedSubStrings(s));
     }
 }
