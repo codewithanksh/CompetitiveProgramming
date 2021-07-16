@@ -8,12 +8,12 @@ public class LinkedList {
 
     Node head;
 
-    static class Node{
+    static class Node {
 
         int data;
         Node next;
 
-        Node (int data) {
+        Node(int data) {
             this.data = data;
             this.next = null;
         }
@@ -26,11 +26,11 @@ public class LinkedList {
         next_node.next = null;
 
         // Empty List
-        if( list.head == null)  list.head = next_node;
+        if (list.head == null) list.head = next_node;
         else {
 
             Node current = list.head;
-            while(current.next != null){
+            while (current.next != null) {
                 current = current.next;
             }
 
@@ -46,13 +46,13 @@ public class LinkedList {
         System.out.println();
         Node head = list.head;
 
-        if(head == null)
+        if (head == null)
             return;
         else {
 
             Node current = list.head;
             while (current.next != null) {
-                System.out.print(current.data+" => ");
+                System.out.print(current.data + " => ");
                 current = current.next;
             }
             System.out.print(current.data);
@@ -61,7 +61,7 @@ public class LinkedList {
 
     static LinkedList reverseList(LinkedList list) {
 
-        if(list.head == null)
+        if (list.head == null)
             return list;
 
         Node prev = null;
@@ -69,10 +69,10 @@ public class LinkedList {
         Node next_node = null;
 
         while (current != null) {
-             next_node = current.next;
-             current.next = prev;
-             prev = current;
-             current = next_node;
+            next_node = current.next;
+            current.next = prev;
+            prev = current;
+            current = next_node;
         }
         list.head = prev;
 
@@ -80,8 +80,7 @@ public class LinkedList {
     }
 
     // Driver code
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         /* Start with the empty list. */
         LinkedList list = new LinkedList();
 
@@ -103,7 +102,7 @@ public class LinkedList {
         printList(list);
         reverseList(list);
         printList(list);
-        }
+    }
 
 
 }
