@@ -1,4 +1,5 @@
 target/
+target/classes
 test-output/
 src/test/resources/screenshots
 src/test/resources/*.xls

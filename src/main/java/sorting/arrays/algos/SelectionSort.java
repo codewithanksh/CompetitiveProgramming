@@ -1,8 +1,8 @@
-package sorting.arrays;
+package sorting.arrays.algos;
 
 import java.util.Arrays;
 
-public class SelectionSort {
+public class  SelectionSort {
 
     public static void selectionSort(int[] arr) {
 
